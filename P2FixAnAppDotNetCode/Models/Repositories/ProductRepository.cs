@@ -12,9 +12,12 @@ namespace P2FixAnAppDotNetCode.Models.Repositories
 
         public ProductRepository()
         {
-            _products = new List<Product>();
-            GenerateProductData();
-        }
+            if (_products == null)
+            {
+                _products = new List<Product>();
+                GenerateProductData();
+            }
+}
 
         /// <summary>
         /// Generate the default list of products
