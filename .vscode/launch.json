@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Diayma",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/P2FixAnAppDotNetCode/bin/Debug/netcoreapp2.0/Diayma.dll",
+      "cwd": "${workspaceFolder}/P2FixAnAppDotNetCode",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development", "ASPNETCORE_URLS": "http://localhost:62929" },
+      "serverReadyAction": { "action": "openExternally", "pattern": "Now listening on:\\s+(https?://\\S+)" }
+    }
+  ]
+}
