@@ -227,3 +227,12 @@ git log --oneline
 | `9d65743` | RAFA | Ajout de la configuration de débogage VS Code (`.vscode/launch.json`, `.vscode/tasks.json`) |
 | `d048cb3` | RAFA | Correction du bug 1 : le total du panier tient compte des quantités (`Models/Cart.cs`) |
 | `add1f7a` | RAFA | Correction du bug 2 : le stock n'est plus réinitialisé à chaque requête (`Models/Repositories/ProductRepository.cs`) |
+| `1842e6a` | RAFA | Ajout de la langue Wolof (`culture wo, fichiers .wo.resx`) |
+
+## 12. Bonus : langue Wolof
+
+- `Startup.cs` : ajout des cultures `wo-SN` et `wo` aux `SupportedCultures` ; les cultures `fr` et `fr-FR` sont conservées.
+- `LanguageService.cs` : `case "Wolof": culture = "wo";`.
+- Sélecteur de langue : nouvelle option « Wolof ».
+- Fichiers `.wo.resx` ajoutés dans `Resources/` pour toutes les vues, le contrôleur de commande et les messages de validation.
+- Effet secondaire : avec la culture `wo-SN`, les prix s'affichent en **F CFA** au lieu de €.
